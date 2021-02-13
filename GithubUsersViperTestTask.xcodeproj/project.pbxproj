@@ -9,21 +9,65 @@
 /* Begin PBXBuildFile section */
 		D53D376525D7EB950070FC14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D376425D7EB950070FC14 /* AppDelegate.swift */; };
 		D53D376725D7EB950070FC14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D376625D7EB950070FC14 /* SceneDelegate.swift */; };
-		D53D376925D7EB950070FC14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D376825D7EB950070FC14 /* ViewController.swift */; };
-		D53D376C25D7EB950070FC14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53D376A25D7EB950070FC14 /* Main.storyboard */; };
 		D53D376E25D7EB960070FC14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53D376D25D7EB960070FC14 /* Assets.xcassets */; };
 		D53D377125D7EB960070FC14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53D376F25D7EB960070FC14 /* LaunchScreen.storyboard */; };
+		D53D378B25D7EFE40070FC14 /* UserLIstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D378A25D7EFE40070FC14 /* UserLIstViewController.swift */; };
+		D53D378E25D7F03B0070FC14 /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D378D25D7F03B0070FC14 /* UserListPresenter.swift */; };
+		D53D379125D7F0C10070FC14 /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D379025D7F0C10070FC14 /* UserListInteractor.swift */; };
+		D53D379425D7F1030070FC14 /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D379325D7F1030070FC14 /* UserListRouter.swift */; };
+		D53D379725D7F1260070FC14 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D379625D7F1260070FC14 /* UserDetailsViewController.swift */; };
+		D53D379A25D7F1410070FC14 /* UserDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53D379925D7F1410070FC14 /* UserDetails.storyboard */; };
+		D53D379D25D7F1640070FC14 /* UserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D379C25D7F1640070FC14 /* UserDetailsPresenter.swift */; };
+		D53D37A025D7F1800070FC14 /* UserDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D379F25D7F1800070FC14 /* UserDetailsInteractor.swift */; };
+		D53D37A325D7F1C50070FC14 /* UserDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37A225D7F1C50070FC14 /* UserDetailsRouter.swift */; };
+		D53D37A625D7F2650070FC14 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53D37A525D7F2650070FC14 /* UserList.storyboard */; };
+		D53D37A925D7F3570070FC14 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37A825D7F3570070FC14 /* Users.swift */; };
+		D53D37AC25D7F3640070FC14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37AB25D7F3640070FC14 /* User.swift */; };
+		D53D37AF25D7F3FB0070FC14 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37AE25D7F3FB0070FC14 /* ApiService.swift */; };
+		D53D37B225D7F40D0070FC14 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37B125D7F40D0070FC14 /* NetworkService.swift */; };
+		D53D37B625D7F67C0070FC14 /* UserListPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37B525D7F67C0070FC14 /* UserListPresenterInput.swift */; };
+		D53D37B925D7F6F80070FC14 /* UserListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37B825D7F6F80070FC14 /* UserListPresenterOutput.swift */; };
+		D53D37BC25D7F7FD0070FC14 /* UserListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37BB25D7F7FD0070FC14 /* UserListInteractorInput.swift */; };
+		D53D37BF25D7F83D0070FC14 /* UserListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37BE25D7F83D0070FC14 /* UserListInteractorOutput.swift */; };
+		D53D37C225D7F8950070FC14 /* UserListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37C125D7F8950070FC14 /* UserListRouterInput.swift */; };
+		D53D37C525D7F9C70070FC14 /* UserDetailsPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37C425D7F9C70070FC14 /* UserDetailsPresenterInput.swift */; };
+		D53D37C825D7F9F50070FC14 /* UserDetailsPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37C725D7F9F50070FC14 /* UserDetailsPresenterOutput.swift */; };
+		D53D37CB25D7FA160070FC14 /* UserDetailsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37CA25D7FA160070FC14 /* UserDetailsInteractorInput.swift */; };
+		D53D37CE25D7FA460070FC14 /* UserDetailsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37CD25D7FA460070FC14 /* UserDetailsInteractorOutput.swift */; };
+		D53D37D125D7FB340070FC14 /* UserDetailsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37D025D7FB340070FC14 /* UserDetailsRouterInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D53D376125D7EB950070FC14 /* GithubUsersViperTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUsersViperTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53D376425D7EB950070FC14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D53D376625D7EB950070FC14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D53D376825D7EB950070FC14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D53D376B25D7EB950070FC14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D53D376D25D7EB960070FC14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D53D377025D7EB960070FC14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D53D377225D7EB960070FC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D53D378A25D7EFE40070FC14 /* UserLIstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLIstViewController.swift; sourceTree = "<group>"; };
+		D53D378D25D7F03B0070FC14 /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
+		D53D379025D7F0C10070FC14 /* UserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
+		D53D379325D7F1030070FC14 /* UserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
+		D53D379625D7F1260070FC14 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		D53D379925D7F1410070FC14 /* UserDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetails.storyboard; sourceTree = "<group>"; };
+		D53D379C25D7F1640070FC14 /* UserDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsPresenter.swift; sourceTree = "<group>"; };
+		D53D379F25D7F1800070FC14 /* UserDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsInteractor.swift; sourceTree = "<group>"; };
+		D53D37A225D7F1C50070FC14 /* UserDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsRouter.swift; sourceTree = "<group>"; };
+		D53D37A525D7F2650070FC14 /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
+		D53D37A825D7F3570070FC14 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		D53D37AB25D7F3640070FC14 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D53D37AE25D7F3FB0070FC14 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		D53D37B125D7F40D0070FC14 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D53D37B525D7F67C0070FC14 /* UserListPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenterInput.swift; sourceTree = "<group>"; };
+		D53D37B825D7F6F80070FC14 /* UserListPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenterOutput.swift; sourceTree = "<group>"; };
+		D53D37BB25D7F7FD0070FC14 /* UserListInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractorInput.swift; sourceTree = "<group>"; };
+		D53D37BE25D7F83D0070FC14 /* UserListInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractorOutput.swift; sourceTree = "<group>"; };
+		D53D37C125D7F8950070FC14 /* UserListRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouterInput.swift; sourceTree = "<group>"; };
+		D53D37C425D7F9C70070FC14 /* UserDetailsPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsPresenterInput.swift; sourceTree = "<group>"; };
+		D53D37C725D7F9F50070FC14 /* UserDetailsPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsPresenterOutput.swift; sourceTree = "<group>"; };
+		D53D37CA25D7FA160070FC14 /* UserDetailsInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsInteractorInput.swift; sourceTree = "<group>"; };
+		D53D37CD25D7FA460070FC14 /* UserDetailsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsInteractorOutput.swift; sourceTree = "<group>"; };
+		D53D37D025D7FB340070FC14 /* UserDetailsRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsRouterInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +100,149 @@
 		D53D376325D7EB950070FC14 /* GithubUsersViperTestTask */ = {
 			isa = PBXGroup;
 			children = (
-				D53D376425D7EB950070FC14 /* AppDelegate.swift */,
-				D53D376625D7EB950070FC14 /* SceneDelegate.swift */,
-				D53D376825D7EB950070FC14 /* ViewController.swift */,
-				D53D376A25D7EB950070FC14 /* Main.storyboard */,
+				D53D377E25D7EE250070FC14 /* Common */,
+				D53D377C25D7EDEB0070FC14 /* Entities */,
+				D53D377A25D7EBBF0070FC14 /* Services */,
+				D53D377925D7EBAF0070FC14 /* Modules */,
 				D53D376D25D7EB960070FC14 /* Assets.xcassets */,
 				D53D376F25D7EB960070FC14 /* LaunchScreen.storyboard */,
 				D53D377225D7EB960070FC14 /* Info.plist */,
 			);
 			path = GithubUsersViperTestTask;
+			sourceTree = "<group>";
+		};
+		D53D377925D7EBAF0070FC14 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D53D377F25D7EE6C0070FC14 /* UserList */,
+				D53D378025D7EE7B0070FC14 /* UserDetails */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D53D377A25D7EBBF0070FC14 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D53D37AE25D7F3FB0070FC14 /* ApiService.swift */,
+				D53D37B125D7F40D0070FC14 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D53D377C25D7EDEB0070FC14 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D53D37A825D7F3570070FC14 /* Users.swift */,
+				D53D37AB25D7F3640070FC14 /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		D53D377E25D7EE250070FC14 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D53D376425D7EB950070FC14 /* AppDelegate.swift */,
+				D53D376625D7EB950070FC14 /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D53D377F25D7EE6C0070FC14 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				D53D378425D7EED10070FC14 /* Router */,
+				D53D378325D7EEC70070FC14 /* Interactor */,
+				D53D378225D7EEBD0070FC14 /* Presenter */,
+				D53D378125D7EEB30070FC14 /* View */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		D53D378025D7EE7B0070FC14 /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D53D378825D7EF310070FC14 /* Router */,
+				D53D378725D7EF2A0070FC14 /* Interactor */,
+				D53D378625D7EF240070FC14 /* Presenter */,
+				D53D378525D7EF200070FC14 /* View */,
+			);
+			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		D53D378125D7EEB30070FC14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D53D378A25D7EFE40070FC14 /* UserLIstViewController.swift */,
+				D53D37A525D7F2650070FC14 /* UserList.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D53D378225D7EEBD0070FC14 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D53D378D25D7F03B0070FC14 /* UserListPresenter.swift */,
+				D53D37B525D7F67C0070FC14 /* UserListPresenterInput.swift */,
+				D53D37B825D7F6F80070FC14 /* UserListPresenterOutput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D53D378325D7EEC70070FC14 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D53D379025D7F0C10070FC14 /* UserListInteractor.swift */,
+				D53D37BB25D7F7FD0070FC14 /* UserListInteractorInput.swift */,
+				D53D37BE25D7F83D0070FC14 /* UserListInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D53D378425D7EED10070FC14 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D53D379325D7F1030070FC14 /* UserListRouter.swift */,
+				D53D37C125D7F8950070FC14 /* UserListRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D53D378525D7EF200070FC14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D53D379625D7F1260070FC14 /* UserDetailsViewController.swift */,
+				D53D379925D7F1410070FC14 /* UserDetails.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D53D378625D7EF240070FC14 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D53D379C25D7F1640070FC14 /* UserDetailsPresenter.swift */,
+				D53D37C425D7F9C70070FC14 /* UserDetailsPresenterInput.swift */,
+				D53D37C725D7F9F50070FC14 /* UserDetailsPresenterOutput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D53D378725D7EF2A0070FC14 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D53D379F25D7F1800070FC14 /* UserDetailsInteractor.swift */,
+				D53D37CA25D7FA160070FC14 /* UserDetailsInteractorInput.swift */,
+				D53D37CD25D7FA460070FC14 /* UserDetailsInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D53D378825D7EF310070FC14 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D53D37A225D7F1C50070FC14 /* UserDetailsRouter.swift */,
+				D53D37D025D7FB340070FC14 /* UserDetailsRouterInput.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +302,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53D379A25D7F1410070FC14 /* UserDetails.storyboard in Resources */,
+				D53D37A625D7F2650070FC14 /* UserList.storyboard in Resources */,
 				D53D377125D7EB960070FC14 /* LaunchScreen.storyboard in Resources */,
 				D53D376E25D7EB960070FC14 /* Assets.xcassets in Resources */,
-				D53D376C25D7EB950070FC14 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +316,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D53D376925D7EB950070FC14 /* ViewController.swift in Sources */,
+				D53D37B625D7F67C0070FC14 /* UserListPresenterInput.swift in Sources */,
+				D53D37CE25D7FA460070FC14 /* UserDetailsInteractorOutput.swift in Sources */,
+				D53D37AC25D7F3640070FC14 /* User.swift in Sources */,
+				D53D37CB25D7FA160070FC14 /* UserDetailsInteractorInput.swift in Sources */,
+				D53D37BF25D7F83D0070FC14 /* UserListInteractorOutput.swift in Sources */,
+				D53D379125D7F0C10070FC14 /* UserListInteractor.swift in Sources */,
+				D53D378B25D7EFE40070FC14 /* UserLIstViewController.swift in Sources */,
+				D53D379425D7F1030070FC14 /* UserListRouter.swift in Sources */,
+				D53D37A925D7F3570070FC14 /* Users.swift in Sources */,
 				D53D376525D7EB950070FC14 /* AppDelegate.swift in Sources */,
+				D53D37A325D7F1C50070FC14 /* UserDetailsRouter.swift in Sources */,
 				D53D376725D7EB950070FC14 /* SceneDelegate.swift in Sources */,
+				D53D37A025D7F1800070FC14 /* UserDetailsInteractor.swift in Sources */,
+				D53D37C825D7F9F50070FC14 /* UserDetailsPresenterOutput.swift in Sources */,
+				D53D37C525D7F9C70070FC14 /* UserDetailsPresenterInput.swift in Sources */,
+				D53D37B225D7F40D0070FC14 /* NetworkService.swift in Sources */,
+				D53D379725D7F1260070FC14 /* UserDetailsViewController.swift in Sources */,
+				D53D37C225D7F8950070FC14 /* UserListRouterInput.swift in Sources */,
+				D53D37B925D7F6F80070FC14 /* UserListPresenterOutput.swift in Sources */,
+				D53D37BC25D7F7FD0070FC14 /* UserListInteractorInput.swift in Sources */,
+				D53D379D25D7F1640070FC14 /* UserDetailsPresenter.swift in Sources */,
+				D53D37D125D7FB340070FC14 /* UserDetailsRouterInput.swift in Sources */,
+				D53D37AF25D7F3FB0070FC14 /* ApiService.swift in Sources */,
+				D53D378E25D7F03B0070FC14 /* UserListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D53D376A25D7EB950070FC14 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D53D376B25D7EB950070FC14 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D53D376F25D7EB960070FC14 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
