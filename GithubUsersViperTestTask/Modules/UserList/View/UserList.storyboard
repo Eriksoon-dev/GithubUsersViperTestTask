@@ -8,16 +8,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--UserL Ist View Controller-->
+        <!--User List View Controller-->
         <scene sceneID="rDI-RZ-BF2">
             <objects>
-                <viewController id="nTX-NM-pSR" customClass="UserLIstViewController" customModule="GithubUsersViperTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserListVC" id="nTX-NM-pSR" customClass="UserListViewController" customModule="GithubUsersViperTestTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Evs-oX-R6w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kmV-gv-t44">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="DZ8-6s-s2A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kmV-gv-t44" firstAttribute="top" secondItem="DZ8-6s-s2A" secondAttribute="top" id="NGn-bo-IFf"/>
+                            <constraint firstItem="DZ8-6s-s2A" firstAttribute="bottom" secondItem="kmV-gv-t44" secondAttribute="bottom" id="Tme-wp-HUq"/>
+                            <constraint firstItem="kmV-gv-t44" firstAttribute="leading" secondItem="DZ8-6s-s2A" secondAttribute="leading" id="YAc-d0-egG"/>
+                            <constraint firstItem="DZ8-6s-s2A" firstAttribute="trailing" secondItem="kmV-gv-t44" secondAttribute="trailing" id="gW4-V8-AvQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="kmV-gv-t44" id="Tmy-Fm-RZ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wm6-wP-guZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

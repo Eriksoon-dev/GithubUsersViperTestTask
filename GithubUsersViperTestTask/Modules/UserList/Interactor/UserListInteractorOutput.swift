@@ -1,3 +1,3 @@
-protocol UserListInteractorOutput {
-    
+protocol UserListInteractorOutput: class {
+    func didReceiveUsers(_ users: [User])
 }
