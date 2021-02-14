@@ -1,3 +1,3 @@
 protocol UserDetailsPresenterOutput: class {
-    func updateUserDetails(details: UserDetail)
+    func updateUserDetails(details: User)
 }

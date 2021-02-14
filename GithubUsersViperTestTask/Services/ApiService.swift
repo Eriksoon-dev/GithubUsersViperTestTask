@@ -1,11 +1,11 @@
 import Foundation
 
-typealias CompletionHandler = (_ data: [User]) -> Void
-typealias CompletionUserDetailHandler = (_ data: UserDetail) -> Void
+typealias CompletionUsersHandler = (_ data: [User]) -> Void
+typealias CompletionUserHandler = (_ data: User) -> Void
 
 protocol GithubServiceProtocol {
-    func getUsers(completion: @escaping CompletionHandler)
-    func getUser(_ identifier: String, completion: @escaping CompletionUserDetailHandler)
+    func getUsers(completion: @escaping CompletionUsersHandler)
+    func getUser(_ identifier: String, completion: @escaping CompletionUserHandler)
 }
 
 // All static paths here
@@ -19,29 +19,32 @@ class ApiService: GithubServiceProtocol {
     
     private let baseUrl: String = "https://api.github.com"
     
-    func getUsers(completion: @escaping CompletionHandler) {
-        
+    func getUsers(completion: @escaping CompletionUsersHandler) {
         // Create final path
-        let finalUrlString = "\(self.baseUrl)\(StaticPaths.users.rawValue)"
+        let finalPath = "\(self.baseUrl)\(StaticPaths.users.rawValue)"
         
-        // Check if created path is a valid url
-        guard let url = URL(string: finalUrlString) else { return }
-        
-        // Make a request to valid url in Network service
-        NetworkService.shared.get(url: url) { (data: [User]) in
-            completion(data)
+        // take all users in closure
+        self.get(path: finalPath) { (users: [User]) in
+            completion(users)
         }
     }
     
-    func getUser(_ identifier: String, completion: @escaping CompletionUserDetailHandler) {
-        
+    func getUser(_ identifier: String, completion: @escaping CompletionUserHandler) {
         // Create final path
-        let finalUrlString = "\(self.baseUrl)\(StaticPaths.users.rawValue)/\(identifier)"
+        let finalPath = "\(self.baseUrl)\(StaticPaths.users.rawValue)/\(identifier)"
         
+        // take user in closure
+        self.get(path: finalPath) { (user: User) in
+            completion(user)
+        }
+    }
+    
+    private func get<T: Decodable>(path: String, completion: @escaping (_ data: T) -> Void) {
         // Check if created path is a valid url
-        guard let url = URL(string: finalUrlString) else { return }
+        guard let url = URL(string: path) else { return }
         
-        NetworkService.shared.get(url: url) { (data: UserDetail) in
+        // Let Network service make network call then take data and pass upwards
+        NetworkService.shared.get(url: url) { (data: T) in
             completion(data)
         }
     }

@@ -10,7 +10,7 @@ extension UserListRouter: UserListRouterInput {
         let view = self.storyboard.instantiateViewController(withIdentifier: "UserListVC") as! UserListViewController
         let navigationController = UINavigationController(rootViewController: view)
         let presenter = UserListPresenter()
-        let interactor = UserListInteractor(apiService: ApiService.shared)
+        let interactor = UserListInteractor(apiService: ApiService.shared, connectionService: NetworkService.shared, cacheService: LocalCacheService.shared)
         let router = UserListRouter()
         
         view.presenter = presenter

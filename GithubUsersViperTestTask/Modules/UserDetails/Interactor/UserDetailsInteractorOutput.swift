@@ -1,3 +1,3 @@
 protocol UserDetailsInteractorOutput: class {
-    func didReceiveUserDetails(details: UserDetail)
+    func didReceiveUserDetails(details: User)
 }

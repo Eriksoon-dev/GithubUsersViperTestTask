@@ -1,7 +1,11 @@
 import Foundation
 import Alamofire
 
-class NetworkService {
+protocol ConnectionServiceProtocol {
+    var isinternetConnectionEnable: Bool { get }
+}
+
+class NetworkService: ConnectionServiceProtocol {
     // Make it singleton
     static let shared = NetworkService()
     
@@ -13,5 +17,11 @@ class NetworkService {
                 guard let users = response.value else { return }
                 completion(users)
             }
+    }
+    
+    var isinternetConnectionEnable: Bool {
+        guard let connectionManager = NetworkReachabilityManager() else { return false }
+
+        return connectionManager.isReachable
     }
 }

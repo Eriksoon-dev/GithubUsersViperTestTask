@@ -15,7 +15,7 @@ class UserDetailsPresenter: UserDetailsPresenterInput {
 }
 
 extension UserDetailsPresenter: UserDetailsInteractorOutput {
-    func didReceiveUserDetails(details: UserDetail) {
+    func didReceiveUserDetails(details: User) {
         self.view.updateUserDetails(details: details)
     }
 }

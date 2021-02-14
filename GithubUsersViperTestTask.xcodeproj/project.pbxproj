@@ -23,7 +23,6 @@
 		D53D37A325D7F1C50070FC14 /* UserDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37A225D7F1C50070FC14 /* UserDetailsRouter.swift */; };
 		D53D37A625D7F2650070FC14 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53D37A525D7F2650070FC14 /* UserList.storyboard */; };
 		D53D37A925D7F3570070FC14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37A825D7F3570070FC14 /* User.swift */; };
-		D53D37AC25D7F3640070FC14 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37AB25D7F3640070FC14 /* UserDetail.swift */; };
 		D53D37AF25D7F3FB0070FC14 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37AE25D7F3FB0070FC14 /* ApiService.swift */; };
 		D53D37B225D7F40D0070FC14 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37B125D7F40D0070FC14 /* NetworkService.swift */; };
 		D53D37B625D7F67C0070FC14 /* UserListPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37B525D7F67C0070FC14 /* UserListPresenterInput.swift */; };
@@ -42,6 +41,8 @@
 		D53D37E525D81EB20070FC14 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37E425D81EB20070FC14 /* NibLoadableView.swift */; };
 		D53D37E925D821FA0070FC14 /* LoadWithCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37E825D821FA0070FC14 /* LoadWithCaching.swift */; };
 		D53D37ED25D859D30070FC14 /* UserDetailsViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37EC25D859D30070FC14 /* UserDetailsViewControllerInput.swift */; };
+		D56871D925D91A9B00446C73 /* LocalCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56871D825D91A9B00446C73 /* LocalCacheService.swift */; };
+		D56871DC25D91ED700446C73 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56871DB25D91ED700446C73 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +66,6 @@
 		D53D37A225D7F1C50070FC14 /* UserDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsRouter.swift; sourceTree = "<group>"; };
 		D53D37A525D7F2650070FC14 /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
 		D53D37A825D7F3570070FC14 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D53D37AB25D7F3640070FC14 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		D53D37AE25D7F3FB0070FC14 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		D53D37B125D7F40D0070FC14 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D53D37B525D7F67C0070FC14 /* UserListPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenterInput.swift; sourceTree = "<group>"; };
@@ -84,6 +84,8 @@
 		D53D37E425D81EB20070FC14 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		D53D37E825D821FA0070FC14 /* LoadWithCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadWithCaching.swift; sourceTree = "<group>"; };
 		D53D37EC25D859D30070FC14 /* UserDetailsViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewControllerInput.swift; sourceTree = "<group>"; };
+		D56871D825D91A9B00446C73 /* LocalCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheService.swift; sourceTree = "<group>"; };
+		D56871DB25D91ED700446C73 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				D53D37AE25D7F3FB0070FC14 /* ApiService.swift */,
 				D53D37B125D7F40D0070FC14 /* NetworkService.swift */,
+				D56871D825D91A9B00446C73 /* LocalCacheService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -170,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				D53D37A825D7F3570070FC14 /* User.swift */,
-				D53D37AB25D7F3640070FC14 /* UserDetail.swift */,
+				D56871DB25D91ED700446C73 /* UserModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -437,7 +440,6 @@
 			files = (
 				D53D37B625D7F67C0070FC14 /* UserListPresenterInput.swift in Sources */,
 				D53D37CE25D7FA460070FC14 /* UserDetailsInteractorOutput.swift in Sources */,
-				D53D37AC25D7F3640070FC14 /* UserDetail.swift in Sources */,
 				D53D37CB25D7FA160070FC14 /* UserDetailsInteractorInput.swift in Sources */,
 				D53D37BF25D7F83D0070FC14 /* UserListInteractorOutput.swift in Sources */,
 				D53D379125D7F0C10070FC14 /* UserListInteractor.swift in Sources */,
@@ -455,8 +457,10 @@
 				D53D37C825D7F9F50070FC14 /* UserDetailsPresenterOutput.swift in Sources */,
 				D53D37C525D7F9C70070FC14 /* UserDetailsPresenterInput.swift in Sources */,
 				D53D37B225D7F40D0070FC14 /* NetworkService.swift in Sources */,
+				D56871DC25D91ED700446C73 /* UserModel.swift in Sources */,
 				D53D379725D7F1260070FC14 /* UserDetailsViewController.swift in Sources */,
 				D53D37C225D7F8950070FC14 /* UserListRouterInput.swift in Sources */,
+				D56871D925D91A9B00446C73 /* LocalCacheService.swift in Sources */,
 				D53D37E925D821FA0070FC14 /* LoadWithCaching.swift in Sources */,
 				D53D37B925D7F6F80070FC14 /* UserListPresenterOutput.swift in Sources */,
 				D53D37BC25D7F7FD0070FC14 /* UserListInteractorInput.swift in Sources */,
