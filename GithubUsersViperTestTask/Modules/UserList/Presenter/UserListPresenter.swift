@@ -8,6 +8,10 @@ class UserListPresenter: UserListPresenterInput {
         self.view.setLoading(isLoading: true)
         self.interactor.getUsers()
     }
+    
+    func showUserDetails(identifier: String) {
+        self.router.showUserDetails(identifier: identifier)
+    }
 }
 
 extension UserListPresenter: UserListInteractorOutput {

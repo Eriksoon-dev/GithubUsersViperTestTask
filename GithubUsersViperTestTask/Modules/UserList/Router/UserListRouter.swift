@@ -28,4 +28,9 @@ extension UserListRouter: UserListRouterInput {
     static var storyboard: UIStoryboard {
         return UIStoryboard(name: "UserList", bundle: Bundle.main)
     }
+    
+    func showUserDetails(identifier: String) {
+        let detailsVC = UserDetailsRouter.loadUserDetailsModule(with: identifier)
+        self.view.present(detailsVC, animated: true, completion: nil)
+    }
 }

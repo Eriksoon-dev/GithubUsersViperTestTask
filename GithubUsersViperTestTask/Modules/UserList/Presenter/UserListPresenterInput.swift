@@ -4,4 +4,5 @@ protocol UserListPresenterInput: class {
     var router: UserListRouterInput! { get set }
     
     func viewDidLoad()
+    func showUserDetails(identifier: String)
 }

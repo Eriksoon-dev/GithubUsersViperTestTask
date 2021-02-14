@@ -41,6 +41,7 @@
 		D53D37E025D81AA40070FC14 /* UserListViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37DF25D81AA40070FC14 /* UserListViewControllerInput.swift */; };
 		D53D37E525D81EB20070FC14 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37E425D81EB20070FC14 /* NibLoadableView.swift */; };
 		D53D37E925D821FA0070FC14 /* LoadWithCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37E825D821FA0070FC14 /* LoadWithCaching.swift */; };
+		D53D37ED25D859D30070FC14 /* UserDetailsViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D37EC25D859D30070FC14 /* UserDetailsViewControllerInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		D53D37DF25D81AA40070FC14 /* UserListViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewControllerInput.swift; sourceTree = "<group>"; };
 		D53D37E425D81EB20070FC14 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		D53D37E825D821FA0070FC14 /* LoadWithCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadWithCaching.swift; sourceTree = "<group>"; };
+		D53D37EC25D859D30070FC14 /* UserDetailsViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewControllerInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 			children = (
 				D53D379625D7F1260070FC14 /* UserDetailsViewController.swift */,
 				D53D379925D7F1410070FC14 /* UserDetails.storyboard */,
+				D53D37EC25D859D30070FC14 /* UserDetailsViewControllerInput.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				D53D37E525D81EB20070FC14 /* NibLoadableView.swift in Sources */,
 				D53D37A025D7F1800070FC14 /* UserDetailsInteractor.swift in Sources */,
 				D53D37DA25D819850070FC14 /* UserCell.swift in Sources */,
+				D53D37ED25D859D30070FC14 /* UserDetailsViewControllerInput.swift in Sources */,
 				D53D37E025D81AA40070FC14 /* UserListViewControllerInput.swift in Sources */,
 				D53D37C825D7F9F50070FC14 /* UserDetailsPresenterOutput.swift in Sources */,
 				D53D37C525D7F9C70070FC14 /* UserDetailsPresenterInput.swift in Sources */,

@@ -64,4 +64,12 @@ extension UserListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60.0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let login = self.users[indexPath.row].login
+        
+        self.presenter.showUserDetails(identifier: login)
+    }
 }
