@@ -6,8 +6,9 @@ class UserListRouter {
 }
 
 extension UserListRouter: UserListRouterInput {
-    class func loadUserListModule() -> UserListViewController {
+    class func loadUserListModule() -> UIViewController {
         let view = self.storyboard.instantiateViewController(withIdentifier: "UserListVC") as! UserListViewController
+        let navigationController = UINavigationController(rootViewController: view)
         let presenter = UserListPresenter()
         let interactor = UserListInteractor(apiService: ApiService.shared)
         let router = UserListRouter()
@@ -22,7 +23,9 @@ extension UserListRouter: UserListRouterInput {
         
         router.view = view
         
-        return view
+        view.navigationItem.title = "Github users"
+        
+        return navigationController
     }
     
     static var storyboard: UIStoryboard {
@@ -31,6 +34,7 @@ extension UserListRouter: UserListRouterInput {
     
     func showUserDetails(identifier: String) {
         let detailsVC = UserDetailsRouter.loadUserDetailsModule(with: identifier)
-        self.view.present(detailsVC, animated: true, completion: nil)
+        detailsVC.navigationItem.title = identifier
+        self.view.navigationController!.pushViewController(detailsVC, animated: true)
     }
 }
