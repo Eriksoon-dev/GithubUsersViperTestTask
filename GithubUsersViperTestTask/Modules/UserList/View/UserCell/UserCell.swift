@@ -6,7 +6,7 @@ class UserCell: UITableViewCell {
     
     static let reuseId: String = String(describing: self)
     
-    func configureWith(data: User) {
+    func configureWith(data: UserViewModel) {
         self.avatarImageView.loadWithCaching(urlString: data.avatar)
         self.userLoginLabel.text = data.login
     }

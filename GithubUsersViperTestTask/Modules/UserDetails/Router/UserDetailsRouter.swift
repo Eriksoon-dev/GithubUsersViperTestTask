@@ -3,9 +3,9 @@ import UIKit
 class UserDetailsRouter: UserDetailsRouterInput {
     var view: UserDetailsViewController!
     
-    class func loadUserDetailsModule(with identifier: String) -> UserDetailsViewController {
+    class func loadUserDetailsModule(with user: UserViewModel) -> UserDetailsViewController {
         let view = self.storyboard.instantiateViewController(withIdentifier: "UserDetailsVC") as! UserDetailsViewController
-        let presenter = UserDetailsPresenter(identifier: identifier)
+        let presenter = UserDetailsPresenter(user: user)
         let interactor = UserDetailsInteractor(apiService: ApiService.shared, connectionService: NetworkService.shared, cacheService: LocalCacheService.shared)
         let router = UserDetailsRouter()
         

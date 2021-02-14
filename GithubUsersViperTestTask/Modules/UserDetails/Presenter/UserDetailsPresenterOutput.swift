@@ -1,3 +1,4 @@
 protocol UserDetailsPresenterOutput: class {
-    func updateUserDetails(details: User)
+    func updateMajorDetails(details: UserDetailsViewModel)
+    func updateMinorDetails(details: UserDetailsViewModel)
 }

@@ -23,13 +23,15 @@ class UserDetailsViewController: UIViewController, UserDetailsViewControllerInpu
 }
 
 extension UserDetailsViewController: UserDetailsPresenterOutput {
-    func updateUserDetails(details: User) {
-        
+    func updateMajorDetails(details: UserDetailsViewModel) {
         self.avatarImageView.loadWithCaching(urlString: details.avatar)
         self.loginLabel.text = details.login
-        self.nameLabel.text = details.name ?? "Unknown"
-        self.cityLabel.text = "Location: \(details.location ?? "Unknown")"
-        self.followersLabel.text = String(details.followers ?? 0)
-        self.followingLabel.text = String(details.following ?? 0)
+    }
+    
+    func updateMinorDetails(details: UserDetailsViewModel) {
+        self.nameLabel.text = details.name
+        self.cityLabel.text = details.locationLabel
+        self.followersLabel.text = details.followersLabel
+        self.followingLabel.text = details.followingLabel
     }
 }

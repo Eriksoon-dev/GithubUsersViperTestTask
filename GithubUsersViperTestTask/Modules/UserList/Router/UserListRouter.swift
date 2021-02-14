@@ -32,9 +32,9 @@ extension UserListRouter: UserListRouterInput {
         return UIStoryboard(name: "UserList", bundle: Bundle.main)
     }
     
-    func showUserDetails(identifier: String) {
-        let detailsVC = UserDetailsRouter.loadUserDetailsModule(with: identifier)
-        detailsVC.navigationItem.title = identifier
+    func showUserDetails(user: UserViewModel) {
+        let detailsVC = UserDetailsRouter.loadUserDetailsModule(with: user)
+        detailsVC.navigationItem.title = user.login
         self.view.navigationController!.pushViewController(detailsVC, animated: true)
     }
 }

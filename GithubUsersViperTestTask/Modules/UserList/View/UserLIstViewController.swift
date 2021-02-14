@@ -4,7 +4,7 @@ class UserListViewController: UIViewController, UserListViewControllerInput {
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: UserListPresenterInput!
-    private var users = [User]()
+    private var users = [UserViewModel]()
     
     // Loading Indicator
     private lazy var loader: UIRefreshControl = {
@@ -31,7 +31,7 @@ class UserListViewController: UIViewController, UserListViewControllerInput {
 }
 
 extension UserListViewController: UserListPresenterOutput {
-    func updateUsers(_ users: [User]) {
+    func updateUsers(_ users: [UserViewModel]) {
         self.users = users
         self.tableView.reloadData()
     }
@@ -68,8 +68,8 @@ extension UserListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let login = self.users[indexPath.row].login
+        let selectedUser = self.users[indexPath.row]
         
-        self.presenter.showUserDetails(identifier: login)
+        self.presenter.showUserDetails(user: selectedUser)
     }
 }

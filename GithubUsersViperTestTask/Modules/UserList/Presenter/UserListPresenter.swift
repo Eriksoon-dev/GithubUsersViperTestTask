@@ -4,19 +4,25 @@ class UserListPresenter: UserListPresenterInput {
     var interactor: UserListInteractorInput!
     var router: UserListRouterInput!
     
+    var userData = [UserViewModel]() {
+        didSet {
+            self.view.updateUsers(self.userData)
+        }
+    }
+    
     func viewDidLoad() {
         self.view.setLoading(isLoading: true)
         self.interactor.getUsers()
     }
     
-    func showUserDetails(identifier: String) {
-        self.router.showUserDetails(identifier: identifier)
+    func showUserDetails(user: UserViewModel) {
+        self.router.showUserDetails(user: user)
     }
 }
 
 extension UserListPresenter: UserListInteractorOutput {
     func didReceiveUsers(_ users: [User]) {
+        self.userData = users.map { UserViewModel(login: $0.login, avatar: $0.avatar) }
         self.view.setLoading(isLoading: false)
-        self.view.updateUsers(users)
     }
 }

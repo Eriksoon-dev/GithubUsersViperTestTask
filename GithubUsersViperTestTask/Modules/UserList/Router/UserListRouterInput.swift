@@ -5,5 +5,5 @@ protocol UserListRouterInput: class {
     
     var view: UserListViewController! { get set }
     
-    func showUserDetails(identifier: String)
+    func showUserDetails(user: UserViewModel)
 }
